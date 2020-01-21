@@ -1,0 +1,95 @@
+body {
+        font-family: 'Courier New', serif;
+        font-weight: 400;
+        width: 95%;
+        max-width: 1200px;
+        margin: 15px;
+}
+
+h1 {
+        font-size: 50px;
+        font-weight: 300;
+        margin-top: 0px;
+        margin-bottom: 0px;
+}
+
+h2 {
+        font-size: 30px;
+        font-weight: 300;
+        margin-top: 5px;
+}
+
+h3 {
+        font-size: 20px;
+        font-weight: 300;
+}
+
+.button {
+        text-decoration: none;
+        font-variant: small-caps;
+        border: solid black 1px;
+        border-radius: 5px;
+        padding: 5px;
+        background-color: blue;
+        color: white;
+}
+
+header {
+        height: 115px;
+        font-variant: small-caps;
+        border-bottom: solid black 1px;
+}
+
+nav {
+        text-align: left;
+        width: 150px;
+        height: 100%;
+        float: left;
+}
+
+nav ul {
+        font-variant: small-caps;
+        list-style-type: none;
+        color: blue;
+        margin: 0px;
+        padding: 0px;
+}
+
+nav ul li {
+        margin: 10px 10px;
+        border: solid black 1px;
+        border-radius: 5px;
+        padding: 5px;
+}
+
+nav ul li a {
+        text-decoration: none;
+        color: blue;
+}
+
+nav ul li a:hover {
+        text-decoration: none;
+        color: red;
+}
+
+nav ul li a:visited {
+        text-decoration: none;
+        color: blue;
+}
+
+#main_content {
+        border-left: solid black 1px;
+        padding-left: 10px;
+        max-width: 1000px;
+        width: 80%;
+        margin-left: 152px;
+        min-height: 400px;
+}
+
+footer {
+        text-align: center;
+        color: red;
+        font-size: 75%;
+        clear: both;
+        padding-top: 25px;
+}
