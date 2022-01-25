@@ -93,3 +93,8 @@ footer {
         clear: both;
         padding-top: 25px;
 }
+
+#outputMessage {
+        font-weight: normal;
+        color: black;
+}

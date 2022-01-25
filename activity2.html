@@ -16,25 +16,30 @@
 	var outputMessage = null;
 
 	function computeLetterGrade() {
-		var numGrade = document.getElementById('numGrade').value();
+		var numGrade = document.getElementById('numGrade').value;
 
-		if (numGrade < 0) {
-			outputMessage = "Value Out Of Range: less than 0";
-		} else if (numGrade < 600) {
-			outputMessage = "Letter Grade = F";
-		} else if (numGrade < 700) {
-			outputMessage = "Letter Grade = D";
-		} else if (numGrade < 800) {
-			outputMessage = "Letter Grade = C";
-		} else if (numGrade < 900) {
-			outputMessage = "Letter Grade = B";
-		} else if (numGrade < 1001) {
-			outputMessage = "Letter Grade = A";
+		if (numGrade < 0 || numGrade > 1000) {
+			document.getElementById('outputMessage').style.fontWeight = "bold";
+			document.getElementById('outputMessage').style.color = "red";
+			outputMessage = "Value Out Of Range: valid range is 0 <= x <= 1000";
 		} else {
-			outputMessage = "Value Out Of Range: greater than 1000";
-		}
+			document.getElementById('outputMessage').style.fontWeight = "normal";
+			document.getElementById('outputMessage').style.color = "black";
 
-		document.getElementById('outputMessage'.innerHTML = outputMessage;
+			if (numGrade < 600) {
+				outputMessage = "Letter Grade = F";
+			} else if (numGrade < 700) {
+				outputMessage = "Letter Grade = D";
+			} else if (numGrade < 800) {
+				outputMessage = "Letter Grade = C";
+			} else if (numGrade < 900) {
+				outputMessage = "Letter Grade = B";
+			} else {
+				outputMessage = "Letter Grade = A";
+			}
+		}	
+		
+		document.getElementById('outputMessage').innerHTML = outputMessage;
 		console.log (numGrade);
 		console.log (outputMessage);
 	}
@@ -58,7 +63,7 @@
 	
 			<p>Provide total points earned here: <input id="numGrade" type="number" min="0" max="1000" onchange="computeLetterGrade()"></p>
 
-			<h1 id="outputMessage"></h1>
+			<p id="outputMessage"></p>
 		</div>
     </body>
 </html>
