@@ -13,15 +13,24 @@
 
 	<script>
 
+	// set the initial value of the output message to null to prevent 
+	// any weirdness or unintended results
 	var outputMessage = null;
 
+	// computeLetterGrade() is the main function for this assignment
 	function computeLetterGrade() {
+
+		// grab the value entered by the user
 		var numGrade = document.getElementById('numGrade').value;
 
+		// for extra credit, pop an error if the input value is out of range
+		// and use some extra style tags
 		if (numGrade < 0 || numGrade > 1000) {
 			document.getElementById('outputMessage').style.fontWeight = "bold";
 			document.getElementById('outputMessage').style.color = "red";
 			outputMessage = "Value Out Of Range: valid range is 0 <= x <= 1000";
+
+		// this is the main piece that sets the proper output for the input value
 		} else {
 			document.getElementById('outputMessage').style.fontWeight = "normal";
 			document.getElementById('outputMessage').style.color = "black";
@@ -39,10 +48,12 @@
 			}
 		}	
 		
+		// display the output message and also output the values to the console log
 		document.getElementById('outputMessage').innerHTML = outputMessage;
 		console.log (numGrade);
 		console.log (outputMessage);
 	}
+
 	</script>
     </head>
 
