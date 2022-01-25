@@ -10,6 +10,35 @@
         <!--[if lt IE 9]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
+
+	<script>
+
+	var outputMessage = null;
+
+	function computeLetterGrade() {
+		var numGrade = document.getElementById('numGrade').value();
+
+		if (numGrade < 0) {
+			outputMessage = "Value Out Of Range: less than 0";
+		} else if (numGrade < 600) {
+			outputMessage = "Letter Grade = F";
+		} else if (numGrade < 700) {
+			outputMessage = "Letter Grade = D";
+		} else if (numGrade < 800) {
+			outputMessage = "Letter Grade = C";
+		} else if (numGrade < 900) {
+			outputMessage = "Letter Grade = B";
+		} else if (numGrade < 1001) {
+			outputMessage = "Letter Grade = A";
+		} else {
+			outputMessage = "Value Out Of Range: greater than 1000";
+		}
+
+		document.getElementById('outputMessage'.innerHTML = outputMessage;
+		console.log (numGrade);
+		console.log (outputMessage);
+	}
+	</script>
     </head>
 
     <body>
@@ -25,8 +54,11 @@
         </nav>
         
         <div id="main_content">
-	<h2>Activity 2</h2>
+			<h2>Activity 2 - Grade Calculator</h2>
+	
+			<p>Provide total points earned here: <input id="numGrade" type="number" min="0" max="1000" onchange="computeLetterGrade()"></p>
 
-	</div>
+			<h1 id="outputMessage"></h1>
+		</div>
     </body>
 </html>
